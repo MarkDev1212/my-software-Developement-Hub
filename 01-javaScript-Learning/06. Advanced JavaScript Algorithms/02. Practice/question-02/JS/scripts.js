@@ -6,13 +6,9 @@
 // ○ reverseCompare(23) prints "Not ok", because 23 is not greater than 32
 
 function reverseCompare(a){
-        let n=a.toString().split("");
-           console.log(n);
-            let reverse1=n.reverse();
-             console.log(reverse1)
-            let join1=reverse1.join("");
-             console.log(join1);
-            if(a>join1){
+        let reverse=Number(a.toString().split("").reverse().join(""))
+          console.log(typeof reverse);
+            if(a>reverse){
                 return `ok`;
             }
             else{
@@ -21,6 +17,7 @@ function reverseCompare(a){
 
 
 
+
     
 }
-console.log(reverseCompare(72));
+console.log(reverseCompare(7245)); 
