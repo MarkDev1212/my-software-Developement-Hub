@@ -12,6 +12,9 @@ function returnFactorial(x){
          for(let i=1; i<=x; i++){
             factorial*=i;
          }
+         // if (factorial===0 || factorial===1){
+         //    return 1;
+         // }
          return `the factorial of ${x} is ${factorial}`;
 }
 console.log(returnFactorial(5));
