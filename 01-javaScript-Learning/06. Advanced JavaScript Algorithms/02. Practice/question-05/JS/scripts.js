@@ -22,7 +22,7 @@
 //3. code 
 
 function isPalindrome(values){
-    //    let currentValue=values.toUpperCase();
+       let currentValue=values.toUpperCase();
        let reverseValue = currentValue.split("").reverse().join("");
        if(currentValue === reverseValue){
         console.log("true");
