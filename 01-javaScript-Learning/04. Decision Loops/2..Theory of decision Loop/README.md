@@ -126,8 +126,8 @@ For example:
 
 question-10/
 └── JS/
-    ├── index.html
-    └── scripts.js
+   | ├── index.html
+   └── scripts.js
 
 This structure keeps each problem independent and makes it easier to:
 
