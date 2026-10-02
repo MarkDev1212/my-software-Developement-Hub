@@ -1,4 +1,4 @@
-// Question 17 (Prime check)
+// Question 11 (Prime check)
 // Write a function that takes a positive integer and returns true if it is a prime number, and false otherwise.
 // ■ Test 1: isPrime(7) returns true
 // ■ Test 2: isPrime(15) returns false
