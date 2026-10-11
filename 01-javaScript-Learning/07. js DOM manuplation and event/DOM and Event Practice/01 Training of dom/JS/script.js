@@ -35,3 +35,11 @@ console.dir(document)
 
         let abebe = document.getElementsByClassName("pink")
         console.log(abebe)
+
+
+        // 2. getElementsByTagName()
+
+        // we use to select the mutiple element by tag name like h1 . p , li
+
+        let selectByTagName = document.getElementsByTagName("li")
+            console.log(selectByTagName)
