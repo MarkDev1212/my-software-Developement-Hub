@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+h1{
+    margin-bottom: 10px;
+}
+#all_ul{
+    margin-left: 40px;
+    list-style: none;
+    width: 200px;
+    
+   
+}
+li{
+    font-size: 20px;
+    height: 20px;
+    padding: 15px 10px;
+    
+}
+.red{
+    background-color: red;
+}
+.yellow{
+    background-color: yellow;
+}
+.green{
+    background-color: aqua;
+}
+.pink{
+    background-color: brown;
+}
