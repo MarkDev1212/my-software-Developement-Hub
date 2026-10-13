@@ -1,6 +1,20 @@
-🚀 Full-Stack Web Development Learning Journey
+<div align="center">
 
-Welcome to my Full-Stack Web Development Learning Journey.
+# 🚀 Full-Stack Web Development Learning Journey
+
+[![GitHub repo size](https://img.shields.io/github/repo-size/MarkDev1212/my-software-Developement-Hub?style=flat-square&color=blue)](https://github.com/MarkDev1212/my-software-Developement-Hub)
+[![GitHub last commit](https://img.shields.io/github/last-commit/MarkDev1212/my-software-Developement-Hub?style=flat-square&color=green)](https://github.com/MarkDev1212/my-software-Developement-Hub)
+[![Status](https://img.shields.io/badge/Status-In%20Progress-orange?style=flat-square)](https://github.com/MarkDev1212/my-software-Developement-Hub)
+
+*A personal record of my software engineering learning journey documenting what I learn, practice, build, and improve.*
+
+</div>
+
+---
+
+## 📖 About This Repository
+
+Welcome to my **Full-Stack Web Development Learning Journey**. 
 
 This repository documents my progress as I learn web development step by step, starting from the fundamentals of HTML, CSS, and Bootstrap, and continuing with JavaScript and future full-stack technologies.
 
@@ -8,58 +22,29 @@ The purpose of this repository is to keep my learning process organized, practic
 
 ---
 
-📚 Learning Roadmap
+## 📚 Learning Roadmap
 
-Learning Roadmap
-#
-Technology / Area
-Status
-Main Topics
-01
-HTML
-✅ Completed
-Semantic HTML, Forms, Tables, HTML5, Structure
-02
-CSS
-✅ Completed
-Selectors, Box Model, Flexbox, Grid, Responsive Design, Animations
-03
-Bootstrap
-✅ Completed
-Grid, Components, Utilities, Forms, Navbar, Responsive Design
-04
-JavaScript
-🚧 In Progress
-Variables, Data Types, Operators, Loops, Functions, Arrays, Objects, OOP, DOM, Events, Async JS
-05
-React
-⏳ Planned
-Components, Props, State, Hooks, Routing, APIs, State Management
-06
-Node.js
-⏳ Planned
-Modules, npm, File System, HTTP, REST APIs, Authentication
-07
-Express.js
-⏳ Planned
-Routing, Middleware, REST APIs, Authentication, Validation
-08
-Databases
-⏳ Planned
-SQL, MySQL, PostgreSQL, CRUD, Relationships, Joins, Transactions
-09
-Full-Stack Projects
-⏳ Planned
-Real-world Projects, Authentication, APIs, Databases, Security, Deployment
+| # | Technology / Area | Status | Main Topics |
+| :---: | :--- | :---: | :--- |
+| **01** | **HTML** | ✅ Completed | Semantic HTML, Forms, Tables, HTML5, Structure |
+| **02** | **CSS** | ✅ Completed | Selectors, Box Model, Flexbox, Grid, Responsive Design, Animations |
+| **03** | **Bootstrap** | ✅ Completed | Grid, Components, Utilities, Forms, Navbar, Responsive Design |
+| **04** | **JavaScript** | 🚧 In Progress | Variables, Data Types, Operators, Loops, Functions, Arrays, Objects, OOP, DOM, Events, Async JS |
+| **05** | **React** | ⏳ Planned | Components, Props, State, Hooks, Routing, APIs, State Management |
+| **06** | **Node.js** | ⏳ Planned | Modules, npm, File System, HTTP, REST APIs, Authentication |
+| **07** | **Express.js** | ⏳ Planned | Routing, Middleware, REST APIs, Authentication, Validation |
+| **08** | **Databases** | ⏳ Planned | SQL, MySQL, PostgreSQL, CRUD, Relationships, Joins, Transactions |
+| **09** | **Full-Stack Projects** | ⏳ Planned | Real-world Projects, Authentication, APIs, Databases, Security, Deployment |
 
 ---
 
-📁 Repository Structure
+## 📁 Repository Structure
 
+```text
 01-Full-Stack-Web-Development/
 │
 ├── README.md
-|
+│
 ├── 01-javaScript-Learning/
 │   │
 │   ├── 01. Introduction To Programming/
@@ -74,12 +59,7 @@ Real-world Projects, Authentication, APIs, Databases, Security, Deployment
 │           ├── question-01/
 │           ├── question-02/
 │           ├── question-03/
-│           ├── question-04/
-│           ├── question-05/
-│           ├── question-06/
-│           ├── question-07/
-│           ├── question-08/
-│           ├── question-09/
+│           ├── ...
 │           └── question-10/
 │
 ├── 05-React/
@@ -87,8 +67,6 @@ Real-world Projects, Authentication, APIs, Databases, Security, Deployment
 ├── 07-Express.js/
 ├── 08-Databases/
 └── 09-Full-Stack-Projects/
-
----
 
 🧠 Learning Approach
 
