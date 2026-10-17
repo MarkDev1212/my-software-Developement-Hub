@@ -97,7 +97,8 @@ console.dir(document)
 
                     // 1. nextElementSybling 
                     // 2. previouseElementSybling
-                    // 3. nextElementChild
+                    // 3. firstElementChild
                     // 4 lastElementChild
 
+                    
 
