@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oumer Tech Community | Progress Tracker</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <!-- defer: the script runs after the HTML is loaded (note 1.7 / 8.2) -->
+  <script src="JS/script.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="brand">
+      <img class="logo" src="assets/oumer-technology-logo.png" alt="Oumer Technology">
+      <div class="brand-text">
+        <h1>Phase 2 Progress Tracker</h1>
+        <p class="tagline">Oumer Tech Community: Dev A1, A2, A3</p>
+      </div>
+    </div>
+
+    <!-- Milestone 3: renderSummary() fills these four values -->
+    <section class="stats" aria-label="Community summary">
+      <div class="stat">
+        <span class="stat-value" id="totalMembers">0</span>
+        <span class="stat-label">Members</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="communityAverage">0</span>
+        <span class="stat-label">Community average</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="onTrackRate">0%</span>
+        <span class="stat-label">On track</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value stat-text" id="topMember">-</span>
+        <span class="stat-label">Top member</span>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <!-- Milestone 4: listen to the "submit" event of this form -->
+    <section class="panel">
+      <h2>Add a member</h2>
+      <form id="memberForm" novalidate>
+        <div class="field field-name">
+          <label for="nameInput">Member name</label>
+          <input type="text" id="nameInput" placeholder="Abebe Kebede">
+        </div>
+
+        <div class="field field-group">
+          <label for="groupInput">Group</label>
+          <select id="groupInput">
+            <option value="">Choose group</option>
+            <option value="Dev A1">Dev A1</option>
+            <option value="Dev A2">Dev A2</option>
+            <option value="Dev A3">Dev A3</option>
+          </select>
+        </div>
+
+        <!-- Scores use type="text" on purpose: you must validate them yourself.
+             All 4 have class="score" so you can select them with querySelectorAll(".score") -->
+        <div class="field">
+          <label for="htmlCss">HTML/CSS</label>
+          <input type="text" class="score" id="htmlCss" placeholder="0 - 100">
+        </div>
+        <div class="field">
+          <label for="jsBasics">JS Basics</label>
+          <input type="text" class="score" id="jsBasics" placeholder="0 - 100">
+        </div>
+        <div class="field">
+          <label for="dom">DOM</label>
+          <input type="text" class="score" id="dom" placeholder="0 - 100">
+        </div>
+        <div class="field">
+          <label for="events">Events</label>
+          <input type="text" class="score" id="events" placeholder="0 - 100">
+        </div>
+
+        <button type="submit" class="add-btn">Add member</button>
+      </form>
+
+      <!-- Show validation messages here with textContent (not alert) -->
+      <p class="error" id="formError" role="alert"></p>
+    </section>
+
+    <section class="panel">
+       
+              
+       <div class="searcDiv">
+         <div id="searchInput" class="field field-search">
+            <label for="events">Search</label>
+           <input type="text"   placeholder="search............" style="width: 90%;" > 
+        </div>
+          <div class="field field-group">
+            <label for="events">Filter</label>
+          <select id="groupInput">
+            <option value="All">All</option>
+            <option value="Dev A1">Dev A1</option>
+            <option value="Dev A2">Dev A2</option>
+            <option value="Dev A3">Dev A3</option>
+          </select>
+        </div>
+       </div>
+      <h2>Members</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th class="num">HTML/CSS</th>
+              <th class="num">JS Basics</th>
+              <th class="num">DOM</th>
+              <th class="num">Events</th>
+              <th class="num">Average</th>
+              <th>Level</th>
+              <th>Status</th>
+              <th><span class="visually-hidden">Actions</span></th>
+            </tr>
+          </thead>
+          <!-- Milestone 3: renderTable() builds the rows inside this tbody -->
+          <tbody id="membersBody"></tbody>
+        </table>
+      </div>
+      <p class="empty" id="emptyMessage">No members yet. Add the first member above.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    Built by a member of Oumer Tech Community &middot; Phase 2 revision project
+  </footer>
+
+</body>
+</html>
