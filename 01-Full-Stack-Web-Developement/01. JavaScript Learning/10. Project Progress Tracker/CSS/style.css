@@ -1,0 +1,292 @@
+/* =========================================================
+   Oumer Tech Community - Progress Tracker
+   This stylesheet is DONE for you. Focus your week on JavaScript.
+   Classes your JavaScript should add to elements it creates:
+     .group-tag            on the <span> inside the Group cell
+     .group-a1 / .group-a2 / .group-a3   colour per group (bonus)
+     .badge                on the <span> inside the Status cell
+     .on-track             add to .badge when average >= 50
+     .needs-support        add to .badge when average < 50
+     .num                  on number cells (right aligned)
+     .delete-btn           on the Delete button in each row
+   ========================================================= */
+
+:root {
+  /* Oumer Technology brand colours (from the logo) */
+  --brand-green: #289145;
+  --brand-green-dark: #1f7337;
+  --brand-orange: #ed4f38;
+
+  --ink: #1d2a23;
+  --ink-soft: #5a6a61;
+  --page: #f3f6f4;
+  --panel: #ffffff;
+  --line: #dce4df;
+  --ok-bg: #e2f3e7;
+  --ok-text: #1f7337;
+  --bad-bg: #fde7e3;
+  --bad-text: #c23620;
+  --a1-bg: #e3f1e7;  --a1-text: #1f7337;
+  --a2-bg: #e6eef8;  --a2-text: #2d5a8c;
+  --a3-bg: #fdf0d8;  --a3-text: #8a5a00;
+  --radius: 10px;
+  --font: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--page);
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
+  padding: 22px 24px 28px;
+  position: relative;
+}
+
+/* Two-colour brand stripe across the top of the page */
+.site-header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--brand-green) 0 70%, var(--brand-orange) 70% 100%);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  max-width: 1052px;
+  margin: 0 auto 24px;
+}
+
+.logo {
+  height: 76px;
+  width: auto;
+  display: block;
+}
+
+.brand-text {
+  border-left: 2px solid var(--line);
+  padding-left: 22px;
+}
+
+h1 { margin: 0; font-size: 24px; line-height: 1.2; color: var(--ink); }
+.tagline { margin: 2px 0 0; color: var(--ink-soft); font-size: 15px; }
+
+.stats {
+  max-width: 1052px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 1.5fr;
+  gap: 16px;
+}
+
+.stat {
+  background: var(--page);
+  border-radius: var(--radius);
+  border-top: 4px solid var(--brand-green);
+  padding: 12px 16px;
+}
+
+/* "On track" and "Top member" use the brand orange to stand out */
+.stat:nth-child(3), .stat:last-child { border-top-color: var(--brand-orange); }
+
+.stat-value {
+  display: block;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-label { color: var(--ink-soft); font-size: 14px; }
+
+/* The top member shows a name, so it uses smaller text than the numbers */
+.stat-text {
+  font-size: 22px;
+  line-height: 1.3;
+  padding: 8px 0 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---------- Panels ---------- */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px 40px;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  margin-top: 20px;
+}
+
+h2 { margin: 0 0 16px; font-size: 18px; }
+
+/* ---------- Form ---------- */
+form {
+  display: grid;
+  grid-template-columns: 1.8fr 1.5fr repeat(4, 1fr) auto;
+  gap: 12px;
+  align-items: end;
+}
+
+.field { display: flex; flex-direction: column; gap: 6px; }
+
+label { font-size: 13px; color: var(--ink-soft); font-weight: 600; }
+
+input, select {
+  font: inherit;
+  font-size: 15px;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  width: 100%;
+}
+
+input:focus, select:focus, button:focus-visible {
+  outline: 2px solid var(--brand-green);
+  outline-offset: 1px;
+  border-color: var(--brand-green);
+}
+
+.add-btn {
+  font: inherit;
+  font-weight: 600;
+  height: 42px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--brand-green);
+  color: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.add-btn:hover { background: var(--brand-green-dark); }
+
+.error {
+  color: var(--bad-text);
+  font-size: 14px;
+  font-weight: 600;
+  min-height: 21px;
+  margin: 10px 0 0;
+}
+
+/* ---------- Table ---------- */
+.table-wrap { overflow-x: auto; position: relative; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+th {
+  text-align: left;
+  font-size: 13px;
+  color: var(--ink-soft);
+  font-weight: 600;
+  padding: 10px 12px;
+  border-bottom: 2px solid var(--line);
+  white-space: nowrap;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+}
+
+tbody tr:hover { background: #f7faf8; }
+
+.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+.group-tag {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--a1-bg);
+  color: var(--a1-text);
+}
+.group-a2 { background: var(--a2-bg); color: var(--a2-text); }
+.group-a3 { background: var(--a3-bg); color: var(--a3-text); }
+
+.badge {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 6px;
+}
+.on-track      { background: var(--ok-bg);  color: var(--ok-text); }
+.needs-support { background: var(--bad-bg); color: var(--bad-text); }
+
+.delete-btn {
+  font: inherit;
+  font-size: 13px;
+  padding: 5px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--bad-text);
+  cursor: pointer;
+}
+.delete-btn:hover { background: var(--bad-bg); border-color: var(--bad-bg); }
+
+.empty { color: var(--ink-soft); margin: 16px 0 0; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.site-footer {
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 13px;
+  padding: 0 24px 32px;
+}
+
+/* ---------- Small screens (phones) ---------- */
+@media (max-width: 820px) {
+  form { grid-template-columns: 1fr 1fr; }
+  .field-name, .add-btn { grid-column: 1 / -1; }
+  .stats { gap: 10px; grid-template-columns: 1fr 1fr; }
+  .stat-value { font-size: 28px; }
+  .stat-text { font-size: 18px; padding: 6px 0 4px; }
+  .stat { padding: 10px 10px; }
+  .stat-label { font-size: 12px; }
+  .brand { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .brand-text { border-left: 0; padding-left: 0; }
+  .logo { height: 52px; }
+  h1 { font-size: 20px; }
+}
+
+
+.searcDiv{
+    display: flex;
+}
