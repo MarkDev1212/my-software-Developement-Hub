@@ -1,15 +1,21 @@
+   function calculateTotal(a,b,c){
+    return a + b +c;
+   }
+   let total = calculateTotal(70,80,90)
+   console.log("total = ",total)
 
-
-function calculateAverage(a,b,c){
-    let avg =  (a+b+c)/3;
-    return avg;
+function calculateAverage(total){
+    
+    return total/3;
 }
+  let average = calculateAverage(total);
+  console.log("average = ",average)
 
-console.log(calculateAverage(50,60,100));
-var avg = calculateAverage(89,67,90);
-console.log(avg)
 function grade(avg){
-      if(avg >= 90){
+       if(typeof avg != "number"){
+        return "please enter a numerical value"
+       }
+     else if(avg >= 90){
        
         return "A+"
       }
@@ -32,13 +38,36 @@ function grade(avg){
         return "C+";
       }
        else if(avg>=100 || avg <= 0){
-            return "envallid"
+            return "invallid"
         }
       else{
         return "F";
       }
      
 }
- console.log(grade(avg))
+
+ console.log(grade(average))
+
+ const calculateArraw = (total = d) => total;
+console.log( calculateArraw("arrow total "+total))
+
+function  displayFunction(message){
+    console.log(message)
+}
+
+function proccesStudent(name,mark,callBack){
+    const total = calculateTotal(mark[0],mark[1],mark[2]);
+    const average = calculateAverage(mark[0],mark[1],mark[2]);
+    const getgrade = grade(average);
+    const message = `
+    name ${name} 
+    total value ${total}
+    average ${average.toFixed(1)}
+    grade ${getgrade} `
+    callBack(message);
+}
+
+proccesStudent("Abebe",[80,90,60],displayFunction)
+
 
 
