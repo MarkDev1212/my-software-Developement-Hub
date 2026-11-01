@@ -58,6 +58,9 @@ console.log(obj.name);
 console.log(obj["age"]);
 console.log(obj[1]);
 console.log(obj["1"]);
+// console.log(obj.1);  //this is not valid because 1 is not a valid identifier for a property name in JavaScript. Property names that are numbers must be accessed using bracket notation, as shown above.
+// so bracket notation is used to access properties with numeric keys or keys that are not valid identifiers.
+  let key = 1;
+console.log(obj.key); // this will access the property with key 1, which is "JavaScript" but the out put will be undefined because obj.key is not a valid property name. To access the property with key 1, we need to use bracket notation like this:
 
-
-
+console.log(obj[key]); // this will access the property with key 1, which is "JavaScript"
