@@ -28,3 +28,13 @@ numbers.forEach(function(num) {
 });
 
 console.log(doubledNumbers);
+
+
+let x_forward_for = "  10.11.11.11.1   ,  8.8.8.8   ";
+
+let clientId = x_forward_for.split(",")[0].trim();
+
+
+console.log(clientId);
+
+
