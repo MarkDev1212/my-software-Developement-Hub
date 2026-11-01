@@ -38,3 +38,14 @@ let clientId = x_forward_for.split(",")[0].trim();
 console.log(clientId);
 
 
+let isAdmin = false;
+if(!isAdmin){
+    console.log(!isAdmin);
+       console.log("You are not an admin");
+
+}
+else{
+    console.log("You are an admin");
+}
+
+
