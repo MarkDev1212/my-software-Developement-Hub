@@ -49,3 +49,31 @@ else{
 }
 
 
+let abebe = "    aaaaaa     "
+console.log(abebe.trim());
+
+
+let ar = "you know"
+
+console.log("this is javascript"+ar+ " and this is a string");
+
+
+console.log(`this is javascript ${ar}
+
+        
+     and this is a string `);
+
+
+     const conditions = [
+  "u.status = 'ACTIVE'",
+  "u.first_name LIKE ?",
+  "u.email LIKE ?"
+];
+
+const result = conditions.join(' AND ');
+console.log(conditions.length);
+console.log(result);
+
+let now = new Date();
+console.log(now.toString());
+console.log(now.toISOString());
