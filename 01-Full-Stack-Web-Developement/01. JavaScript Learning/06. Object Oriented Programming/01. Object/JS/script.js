@@ -64,3 +64,61 @@ console.log(obj["1"]);
 console.log(obj.key); // this will access the property with key 1, which is "JavaScript" but the out put will be undefined because obj.key is not a valid property name. To access the property with key 1, we need to use bracket notation like this:
 
 console.log(obj[key]); // this will access the property with key 1, which is "JavaScript"
+
+
+const date = new Date();
+console.log(date.toString());
+
+console.log(date.toISOString());
+
+
+let member =[
+  {id: 1, name: "Abebe", team: "Dev 1", score: 90},
+  {id: 2, name: "Kebede",team: "Dev 2", score: 80},
+  {id: 3, name: "Alemu",team: "Dev 3", score: 85}
+]
+const sameMember = member[0]
+console.log(sameMember)
+ sameMember.score = 100
+ console.log(member[0].score)
+ member[0].score = 90
+ console.log(sameMember === member[0])
+
+
+ let fined = prompt("Enter the id of the person you want to find: ");
+ let foundPerson = pewple.find(person => person.id === parseInt(fined));
+ console.log(foundPerson);
+
+
+const aq =3;
+// aq =5;
+console.log(aq)
+
+let original = {
+  name: "abebe",
+  address: {city: "assela"}
+}
+
+
+const  t = {...original}
+const ad = structuredClone(original)
+console.log(ad)
+console.log(t)
+
+
+let original1 = {
+  nname: "abebe",
+  address:"assela"
+}
+
+let {nname, address} = original1;
+console.log(nname);
+console.log(address);
+console.log(original1.nname);
+
+
+let ab ="10";
+console.log(typeof ab);
+let num = parseInt(ab,10);
+console.log(num)
+console.log(typeof num);
