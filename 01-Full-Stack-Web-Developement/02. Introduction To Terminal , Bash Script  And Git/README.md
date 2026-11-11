@@ -2,7 +2,7 @@
 
 ## 1.1 Introduction to Phase 3
 
-Refer to the class video for an introduction to Phase 3.
+phase 3 is talking about node ja but we must know before about git and bash and terminal
 
 ---
 
