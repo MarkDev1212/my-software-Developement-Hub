@@ -77,3 +77,30 @@ console.log(result);
 let now = new Date();
 console.log(now.toString());
 console.log(now.toISOString());
+
+
+let ab = "20i"
+console.log(typeof ab);
+  let parsedValue = parseInt(ab, 10);
+  console.log(parsedValue);
+console.log(typeof parseInt(ab));
+
+
+
+let aa ={
+    name: "Abebe",age: 30,city: "Addis Ababa"
+}
+console.log(typeof aa);
+const jsonString = JSON.stringify(aa);
+console.log(jsonString);
+console.log(typeof jsonString);
+
+
+const jsonData = '{"name":"Mark","age":22,"role":"Developer"}';
+console.log(typeof jsonData);
+
+const user = JSON.parse(jsonData);
+
+console.log(user);
+console.log(user.name);
+console.log(user.age);
